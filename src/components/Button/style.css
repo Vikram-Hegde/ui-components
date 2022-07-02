@@ -1,5 +1,5 @@
 /* =========
-    Global 
+    Global
    ========= */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
@@ -129,7 +129,7 @@ button {
 
 .primary {
     background-image: var(--primary-gradient);
-   
+
 }
 
 .secondary {
@@ -171,7 +171,7 @@ button {
 
 .download {
     background-color: var(--download-default-green);
-  
+
 }
 
 .download span {
@@ -188,7 +188,7 @@ button {
     font-size: medium;
     display: inline-flex;
     flex-shrink: 3;
-   
+
 }
 
 input[type=file]::file-selector-button {
@@ -271,7 +271,7 @@ input):where(:active):focus-visible {
         --box-shadow-active-light-two: var(--box-shadow-active-dark-one);
         /* --focus-outline-color: hsla(0, 0%, 89%, 0.915); */
         --focus-outline-color: #8ab4f8;
-       
+
         --tertiary-disabled-border-light: #ffffff4c;
         --tertiary-disabled-text-light: #adb5bd;
         --download-default-green:var(--download-default-green-dark);
