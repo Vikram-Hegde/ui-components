@@ -16,7 +16,7 @@
 	</head>
 	<body>
 		<section class="component">
-			<h1 class="component__heading">Tag Input</h1>
+			<h1 class="component__heading">Hashtag Input</h1>
 			<div class="component__tag-input">
 				<form class="input-form">
 					<input
@@ -59,7 +59,11 @@
 						stroke-linejoin="round"
 					/>
 				</svg>
-				Seperate the tags using a comma, or hit enter after entering a tag
+				<span
+					>Seperate the tags using
+					<span class="toggle">a <kbd>comma</kbd>, or hit</span>
+					<kbd>Enter</kbd> after entering a tag</span
+				>
 			</p>
 		</section>
 		<svg class="symbols" xmlns="http://www.w3.org/2000/svg">
@@ -92,6 +96,6 @@
 				/>
 			</symbol>
 		</svg>
-		<script src="./script.js"></script>
+		<script type="module" src="./script.js"></script>
 	</body>
 </html>

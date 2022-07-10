@@ -28,7 +28,7 @@ input.addEventListener('keydown', (e) => {
 		e.preventDefault();
 		addTag(input.value);
 	} 
-	else if (e.code === 'Backspace' && input.value.length === 0)
+	else if (e.code === 'Backspace' && !input.value.length)
 		e.target.parentNode?.previousElementSibling?.remove();
 });
 
