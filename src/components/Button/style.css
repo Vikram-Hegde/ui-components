@@ -106,6 +106,7 @@ button {
   font-weight: 650;
   border: 0px;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .widget {
