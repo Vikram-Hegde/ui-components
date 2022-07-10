@@ -2,308 +2,298 @@
     Global 
    ========= */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    /*lightmode-colors*/
-    --bg-light: #f5f7fb;
-    --primary: hsl(230, 100%, 58%);
-    --primary-gradient: linear-gradient( hsla(228, 98%, 64%, 0.841), hsl(230, 100%, 58%));
-    --secondary-text-light: hsl(230, 100%, 58%);
-    --secondary-bg-light: white;
-    --tertiary-text-light: #454D54;
-    --tertiary-bg-light: white;
-    --tertiary-border-light: #d9d9d9;
-    --tertiary-disabled-text-light: #45544bae;
-    --tertiary-disabled-border-light: #d9d9d973;
-    --box-shadow-hover-light-one: rgba(205, 215, 254, 0.707);
-    --box-shadow-active-light-one: hsl(228 81% 80%);
-    --box-shadow-hover-light-two: rgba(204, 207, 222, 0.381);
-    --box-shadow-active-light-two: rgb(185, 193, 224);
-    --download-default-green-light: #55ca3d;
-    --download-hover-green-light: #36a420;
-    --download-active-green-light:#3eb825cc;
-    --focus-outline-color: rgba(79, 75, 75, 0.749);
-    --component-bg-light: #eaedf0;
-    /*darkmode-colors*/
-    --bg-dark: #222222;
-    --component-bg-dark: #353535;
-    --box-shadow-hover-dark-one: #171a1c3d;
-    --box-shadow-active-dark-one: #171a1c67;
-    --secondary-text-dark: white;
-    --secondary-bg-dark: #484f56;
-    --tertiary-bg-dark: #171a1c;
-    --text-dark: ;
-    --download-default-green-dark:var(--download-hover-green-light);
-    --download-hover-green-dark:var(--download-default-green-light);
-    --download-active-green-dark:var(--download-default-green-dark);
-    /*default*/
-    --background: var(--bg-light);
-    --component-bg: var(--component-bg-light);
-    --box-shadow-hover-one: var(--box-shadow-hover-light-one);
-    --box-shadow-active-one: var(--box-shadow-active-light-one);
-    --secondary-text: var(--secondary-text-light);
-    --secondary-bg: var(--secondary-bg-light);
-    --tertiary-border: var(--tertiary-disabled-border-light);
-    --tertiary-bg:var(--tertiary-bg-light);
-    --download-default-green:var(--download-default-green-light);
-    --download-hover-green:var(--download-hover-green-light);
-    --download-active-green:var(--download-active-green-light);
+  /*lightmode-colors*/
+  --bg-light: #f5f7fb;
+  --primary: hsl(230, 100%, 58%);
+  --primary-gradient: linear-gradient(
+    hsla(228, 98%, 64%, 0.841),
+    hsl(230, 100%, 58%)
+  );
+  --secondary-text-light: hsl(230, 100%, 58%);
+  --secondary-bg-light: white;
+  --tertiary-text-light: #454d54;
+  --tertiary-bg-light: white;
+  --tertiary-border-light: #d9d9d9;
+  --tertiary-disabled-text-light: #45544bae;
+  --tertiary-disabled-border-light: #d9d9d973;
+  --box-shadow-hover-light-one: rgba(205, 215, 254, 0.707);
+  --box-shadow-active-light-one: hsl(228 81% 80%);
+  --box-shadow-hover-light-two: rgba(204, 207, 222, 0.381);
+  --box-shadow-active-light-two: rgb(185, 193, 224);
+  --download-default-green-light: #55ca3d;
+  --download-hover-green-light: #36a420;
+  --download-active-green-light: #3eb825cc;
+  --focus-outline-color: rgba(79, 75, 75, 0.749);
+  --component-bg-light: #eaedf0;
+  /*darkmode-colors*/
+  --bg-dark: #222222;
+  --component-bg-dark: #353535;
+  --box-shadow-hover-dark-one: #171a1c3d;
+  --box-shadow-active-dark-one: #171a1c67;
+  --secondary-text-dark: white;
+  --secondary-bg-dark: #484f56;
+  --tertiary-bg-dark: #171a1c;
+  --text-dark: ;
+  --download-default-green-dark: var(--download-hover-green-light);
+  --download-hover-green-dark: var(--download-default-green-light);
+  --download-active-green-dark: var(--download-default-green-dark);
+  /*default*/
+  --background: var(--bg-light);
+  --component-bg: var(--component-bg-light);
+  --box-shadow-hover-one: var(--box-shadow-hover-light-one);
+  --box-shadow-active-one: var(--box-shadow-active-light-one);
+  --secondary-text: var(--secondary-text-light);
+  --secondary-bg: var(--secondary-bg-light);
+  --tertiary-border: var(--tertiary-disabled-border-light);
+  --tertiary-bg: var(--tertiary-bg-light);
+  --download-default-green: var(--download-default-green-light);
+  --download-hover-green: var(--download-hover-green-light);
+  --download-active-green: var(--download-active-green-light);
 }
-
 
 /* =========
    layout
    ========= */
 
 body {
-    background-color: var(--background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-wrap: wrap;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-wrap: wrap;
 }
 
 .component {
-    display: flex;
-    background-color: var(--component-bg);
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: fit-content;
-    height: auto;
-    border-radius: 6px;
+  display: flex;
+  background-color: var(--component-bg);
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: fit-content;
+  height: auto;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
 }
-
 .component-row1 {
-    display: flex;
-    flex-wrap: wrap;
-    /* background-color: bisque; */
-    text-align: center;
-    width: fit-content;
-    height: auto;
-    /* justify-content: space-around; */
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
 }
 
 .component-row2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 650;
-    border: 0px;
-    user-select: none;
-    box-shadow: black, black, 2px 2px 555px black black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 650;
+  border: 0px;
+  user-select: none;
 }
 
 .widget {
-    /* padding: 0.5em; */
-    /* background-color: #22262A; */
-    margin: 1.5rem;
-    display: inline-flex;
+  margin: 1.5rem;
+  display: inline-flex;
 }
 
 .button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: var(--secondary-text-dark);
-    padding: 0.7rem 1.8rem;
-    cursor: pointer;
-    border-radius: 7px;
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-    transition: .11s all ease;
-    overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--secondary-text-dark);
+  padding: 0.7rem 1.8rem;
+  cursor: pointer;
+  border-radius: 7px;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  transition: 0.1s all ease;
+  overflow: hidden;
 }
 
 .primary {
-    background-image: var(--primary-gradient);
-    /* border: 1px solid var(--primary); */
+  background-image: var(--primary-gradient);
 }
 
 .secondary {
-    color: var(--primary);
-    background-color: var(--secondary-bg);
-    border: 2.4px solid hsla(230, 100%, 58%, 0.507);
+  color: var(--primary);
+  background-color: var(--secondary-bg);
+  border: 2.4px solid hsla(230, 100%, 58%, 0.507);
 }
 
 .secondary-icon {
-    color: var(--primary);
-    background-color: var(--secondary-bg);
-    border: 2.4px solid hsla(230, 100%, 58%, 0.507);
+  color: var(--primary);
+  background-color: var(--secondary-bg);
+  border: 2.4px solid hsla(230, 100%, 58%, 0.507);
 }
 
 .secondary-icon span {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
 .secondary-icon svg {
-    /* color: var(--primary); */
-    position: relative;
-    top: 1px;
-    right: 3px;
-    pointer-events: none;
+  position: relative;
+  top: 1px;
+  right: 3px;
+  pointer-events: none;
 }
 
 .tertiary {
-    color: var(--tertiary-text-light);
-    background-color: var(--tertiary-bg);
-    border: 2.4px solid var(--tertiary-border-light);
+  color: var(--tertiary-text-light);
+  background-color: var(--tertiary-bg);
+  border: 2.4px solid var(--tertiary-border-light);
 }
 
 .tertiary-disabled {
-    color: var(--tertiary-disabled-text-light);
-    background-color: var(--bg-light);
-    border: 2.4px solid var(--tertiary-disabled-border-light);
-    cursor: not-allowed;
+  color: var(--tertiary-disabled-text-light);
+  background-color: var(--bg-light);
+  border: 2.4px solid var(--tertiary-disabled-border-light);
+  cursor: not-allowed;
 }
 
 .download {
-    background-color: var(--download-default-green);
-  
+  background-color: var(--download-default-green);
 }
 
 .download span {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
 .upload-file {
-    color: black;
-    background-color: #d9dee3;
-    height: 2.5rem;
-    padding: 0.1rem 1.8rem;
-    position: relative;
-    top: 5px;
-    font-size: medium;
-    display: inline-flex;
-    flex-shrink: 3;
-   
+  color: black;
+  background-color: #d9dee3;
+  height: 2.5rem;
+  padding: 0.1rem 1.8rem;
+  position: relative;
+  /* top: 5px; */
+  font-size: medium;
+  display: inline-flex;
+
+  flex-shrink: 3;
 }
 
-input[type=file]::file-selector-button {
-    padding: 5px;
-    color: #22262ad5;
-    position: relative;
-    right: 27px;
-    cursor: pointer;
-    width: 40%;
-    font-size: medium;
-    font-weight: 650;
-    background-color: #ffffff;
-    border: none;
-    height: 100%;
-    border-radius: 4px;
-    appearance: none;
-    margin: 0;
-    display: inline-flex;
+input[type="file"]::file-selector-button {
+  padding: 6px;
+  color: #22262ad5;
+  position: relative;
+  right: 27px;
+  cursor: pointer;
+  width: 40%;
+  font-size: medium;
+  font-weight: 650;
+  background-color: #ffffff;
+  border: none;
+  height: 100%;
+  border-radius: 4px;
+  appearance: none;
 
-    justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .primary:hover {
-    box-shadow: 0px 0px 1px 6px var(--box-shadow-hover-one);
+  box-shadow: 0px 0px 1px 6px var(--box-shadow-hover-one);
 }
 
- :is( .secondary,
-.secondary-icon):hover {
-    box-shadow: 0px 0px 1px 6px var(--box-shadow-hover-one);
+:is(.secondary, .secondary-icon):hover {
+  box-shadow: 0px 0px 1px 6px var(--box-shadow-hover-one);
 }
 
-:is(.primary,
-.secondary,
-.secondary-icon):active {
-    box-shadow: 0px 0px 1px 0px var(--box-shadow-active-one);
+:is(.primary, .secondary, .secondary-icon):active {
+  box-shadow: 0px 0px 1px 0px var(--box-shadow-active-one);
 }
 
 :is(.tertiary):hover {
-    box-shadow: 0px 0px 1px 6px var(--box-shadow-hover-light-two);
+  box-shadow: 0px 0px 1px 6px var(--box-shadow-hover-light-two);
 }
 
 :is(.tertiary):active {
-    box-shadow: 0px 0px 1px 0px var(--box-shadow-active-light-two);
+  box-shadow: 0px 0px 1px 0px var(--box-shadow-active-light-two);
 }
 
 .download:hover {
-    background-color: var(--download-hover-green);
+  background-color: var(--download-hover-green);
 }
 
 .download:active {
-    background-color: #3eb825cc;
-    background-color: var(--download-active-green);
+  background-color: #3eb825cc;
+  background-color: var(--download-active-green);
 }
 
-:where(button,
-input):focus-visible {
-    outline-offset: 3px;
-    outline: 2px solid black;
-    outline-color: var(--focus-outline-color);
+:where(button, input):focus-visible {
+  outline-offset: 3px;
+  outline: 2px solid black;
+  outline-color: var(--focus-outline-color);
 }
 
-:where(button,
-input):where(:active):focus-visible {
-    outline: 2px solid black;
-    outline-offset: 0.5px;
-    outline-color: var(--focus-outline-color);
+:where(button, input):where(:active):focus-visible {
+  outline: 2px solid black;
+  outline-offset: 0.5px;
+  outline-color: var(--focus-outline-color);
 }
 
-@media(prefers-color-scheme:dark) {
-     :root {
-        --primary: var(--secondary-text-dark);
-        --background: var(--bg-dark);
-        --component-bg: var(--component-bg-dark);
-        --box-shadow-hover-one: var(--box-shadow-hover-dark-one);
-        --box-shadow-active-one: var(--box-shadow-active-dark-one);
-        --secondary-bg: var(--secondary-bg-dark);
-        --tertiary-bg: var(--tertiary-bg-dark);
-        --tertiary-border: var(--tertiary-disabled-border-dark);
-        --box-shadow-hover-light-two: var(--box-shadow-hover-dark-one);
-        --box-shadow-active-light-two: var(--box-shadow-active-dark-one);
-        /* --focus-outline-color: hsla(0, 0%, 89%, 0.915); */
-        --focus-outline-color: #8ab4f8;
-        /* --focus-outline-color: #63ade5; */
-        --tertiary-disabled-border-light: #ffffff4c;
-        --tertiary-disabled-text-light: #adb5bd;
-        --download-default-green:var(--download-default-green-dark);
-        --download-hover-green:var(--download-hover-green-dark);
-        --download-active-green:var(--download-active-green-dark);
-    }
-    .secondary,
-    .secondary-icon {
-        border: none;
-    }
-    .tertiary {
-        color: white;
-        border: 1px solid #ffffff4c;
-    }
-    .button {
-        /* box-shadow: 0px 2px 1px 2px #00000010; */
-        box-shadow: 0px 2px 1px 2px #00000017;
-    }
-    .tertiary-disabled {
-        background-color: #353b4100;
-        border: 2px solid var(--tertiary-disabled-border-light);
-    }
-    .upload-file {
-        box-shadow: 0px 0px 1px 2px #00000010;
-        color: white;
-        background: var(--tertiary-bg);
-    }
-    input[type=file]::file-selector-button {
-        color: white;
-        background: var(--secondary-bg);
-    }
-    svg {
-        stroke: white;
-    }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: var(--secondary-text-dark);
+    --background: var(--bg-dark);
+    --component-bg: var(--component-bg-dark);
+    --box-shadow-hover-one: var(--box-shadow-hover-dark-one);
+    --box-shadow-active-one: var(--box-shadow-active-dark-one);
+    --secondary-bg: var(--secondary-bg-dark);
+    --tertiary-bg: var(--tertiary-bg-dark);
+    --tertiary-border: var(--tertiary-disabled-border-dark);
+    --box-shadow-hover-light-two: var(--box-shadow-hover-dark-one);
+    --box-shadow-active-light-two: var(--box-shadow-active-dark-one);
+    /* --focus-outline-color: hsla(0, 0%, 89%, 0.915); */
+    --focus-outline-color: #8ab4f8;
+    --tertiary-disabled-border-light: #ffffff4c;
+    --tertiary-disabled-text-light: #adb5bd;
+    --download-default-green: var(--download-default-green-dark);
+    --download-hover-green: var(--download-hover-green-dark);
+    --download-active-green: var(--download-active-green-dark);
+  }
+  .secondary,
+  .secondary-icon {
+    border: none;
+  }
+  .tertiary {
+    color: white;
+    border: 1px solid #ffffff4c;
+  }
+  .button {
+    box-shadow: 0px 2px 1px 2px #00000017;
+  }
+  .tertiary-disabled {
+    background-color: #353b4100;
+    border: 2px solid var(--tertiary-disabled-border-light);
+  }
+  .upload-file {
+    box-shadow: 0px 0px 1px 2px #00000010;
+    color: white;
+    background: var(--tertiary-bg);
+  }
+  input[type="file"]::file-selector-button {
+    color: white;
+    background: var(--secondary-bg);
+  }
+  svg {
+    stroke: white;
+  }
 }
