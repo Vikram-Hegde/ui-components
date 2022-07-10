@@ -38,6 +38,7 @@ body {
 
 .component {
 	max-width: 540px;
+	padding: 2rem;
 }
 
 .component__heading {
@@ -59,13 +60,8 @@ body {
 	padding: var(--gap) 0.7rem;
 	margin: var(--margin-top) 0 0.5rem 0;
 	position: relative;
-	transition: var(--outline-anim), box-shadow 100ms ease-in-out;
+	transition: var(--outline-anim);
 	outline-offset: 4px;
-}
-
-.component__tag-input:is(:hover, :focus-within) {
-	/* box-shadow: 0 0 1px 0 rgba(189, 192, 207, 0.06),
-		0 10px 16px -1px rgba(189, 192, 207, 0.2); */
 }
 
 .component__tag-input:focus-within {
@@ -94,13 +90,19 @@ body {
 .tag {
 	position: relative;
 	padding: 0.25rem 0.5rem;
-	/* background-color: var(--bg-200); */
 	color: var(--text-100);
 	line-height: 1;
 	display: flex;
 	align-items: center;
 	gap: 0.25rem;
 	isolation: isolate;
+}
+
+kbd {
+	background-color: var(--bg-200);
+	padding: 4px;
+	margin: 0 2px;
+	border-radius: 4px;
 }
 
 .tag:before {
@@ -134,8 +136,14 @@ body {
 }
 
 .component__info {
+	align-items: start;
 	line-height: 1;
 	gap: 0.25rem;
+}
+
+.component__info > svg {
+	margin-top: 1px;
+	flex-shrink: 0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -150,9 +158,12 @@ body {
 		--bg-200: var(--bg-200-dark);
 		--red: var(--red-dark);
 	}
-.component__tag-input:is(:hover, :focus-within) {
-	box-shadow: none;
 }
+
+@media (hover: none) {
+	.toggle {
+		display: none;
+	}
 }
 
 .symbols {
