@@ -98,9 +98,9 @@ body {
   height: 1px;
   background-color: rgb(118, 118, 118);
   background-color: var(--break);
-   background-image: var(--break-dark-gradient); 
+   background-image: var(--break-dark-gradient);
   margin: 10px 0px;
-} 
+}
 */
 .break {
   height: 1px;
