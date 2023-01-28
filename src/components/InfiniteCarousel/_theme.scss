@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+$colors: (
+	light: (
+		text: (
+			//100:hsl(var(--h))
+		),
+		surface: (
+			bg: hsl(var(--h) var(--s) 90%),
+			// svg: hsl(0 2 10%),
+			buttons: hsla(0, 0%, 81%, 0.4),
+			button_select: hsl(0, 0%, 90%),
+		),
+	),
+	dark: (
+		text: (
+			100: hsl(var(--h) var(--s) 95%),
+		),
+		surface: (
+			bg: hsl(var(--h) var(--s) 9%),
+			buttons: hsla(0, 0%, 81%, 0.5),
+			button_select: hsl(0, 0%, 90%),
+		),
+	),
+);
+@mixin color-scheme($type: light) {
+	@each $prop, $value in map-get($colors, $type) {
+		@each $num, $val in $value {
+			--#{$prop}-#{$num}: #{$val};
+		}
+	}
+}
+:root {
+	--h: 0;
+	--s: 0%;
+	--regular: 400;
+	--medium: 500;
+
+	@include color-scheme(light);
+}
+[color-scheme='dark'] {
+	@include color-scheme(dark);
+}
+[color-scheme='light'] {
+	@include color-scheme(light);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		@include color-scheme(dark);
+	}
+}

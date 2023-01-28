@@ -1,0 +1,24 @@
+@mixin flex-variant(
+	$justify-content,
+	$align-items,
+	$flex-direction: false,
+	$wrap: false
+) {
+	@if $flex-direction {
+		flex-direction: $flex-direction;
+	}
+	@if $wrap {
+		flex-wrap: $wrap;
+	}
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+@mixin flex() {
+	@include flex-variant(center, center);
+}
+@mixin mobileDimensions() {
+	--slider-width: 300px;
+	--slider-height: 200px;
+	--neg-width: -300px;
+}
