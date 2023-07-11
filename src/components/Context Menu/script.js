@@ -64,7 +64,8 @@ document.addEventListener('contextmenu', (e) => {
 
 	menu.setAttribute(
 		'style',
-		`display: flex; --toggle: ${pos.toggleLR}; top: ${pos.top}px; left: ${pos.left}px; right: ${pos.right}px`
+		//`display: flex; --toggle: ${pos.toggleLR}; top: ${pos.top}px; left: ${pos.left}px; right: ${pos.right}px`
+		`display: flex; --toggle: ${pos.toggleLR}; top: ${pos.top}px; left: ${pos.left === 'auto' ? pos.left : pos.left + 'px'}; right: ${pos.right === 'auto' ? pos.right : pos.right + 'px'}`
 	)
 
 	menu.animate(
